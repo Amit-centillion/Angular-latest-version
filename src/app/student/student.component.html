@@ -1,0 +1,79 @@
+<h3>Add Student Data</h3>
+<div class="mt-3">
+  <form [formGroup]="initform">
+    <div class="form-group row">
+      <div class="col-lg-4">
+      <label for="firstName" class=" col-form-label">First Name:</label>
+      <input type="text" id="studentName"  formControlName="firstName" required/>
+      <div  *ngIf="isSave && firstName.invalid">
+        <p class="text-danger">First Name is required!</p>
+      </div>
+    </div>
+      <div class="col-lg-4">
+      <label for="lastName" class=" col-form-label">Last Name:</label>
+      <input type="text" id="studentName"  formControlName="lastName" required/>
+      <div  *ngIf="isSave && lastName.invalid">
+        <p class="text-danger">Last Name is required!</p>
+      </div>
+    </div>
+      <div class="col-lg-4">
+      <label for="email" class=" col-form-label">Date of Birth:</label>
+      <input type="date" id="studentName"  formControlName="dateofBirth" required/>
+      <div  *ngIf="isSave && dateofBirth.invalid">
+        <p class="text-danger">Date of Birth is required!</p>
+      </div>
+    </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-lg-4">
+      <label for="lastName" class=" col-form-label">Contact Number:</label>
+      <input type="text" id="studentName"  formControlName="contactNumber" required/>
+      <div  *ngIf="isSave && contactNumber.invalid">
+        <p class="text-danger">Contact Number is required!</p>
+      </div>
+    </div>
+      <div class="col-lg-4">
+      <label for="email" class=" col-form-label">Address:</label>
+      <input type="text" id="studentName"  formControlName="address" required/>
+      <div  *ngIf="isSave && address.invalid">
+        <p class="text-danger">Address is required!</p>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <label for="firstName" class=" col-form-label">Gender:</label>
+      <span>
+        <input type="radio" style="width: auto;" formControlName="gender" value="male" required/>
+        Male
+      </span>
+      <span>
+        <input type="radio" style="width: auto;" formControlName="gender" value="female" required/>
+        Female
+      </span>  
+      <div>
+        <p class="text-danger" *ngIf="isSave && gender.invalid" style="margin-top: 19px;">Gender is required!</p>
+      </div>
+        </div>
+    </div>
+    <div class="form-group row mt-3">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary" (click)="OnClickButton()">Submit</button>
+      </div>
+    </div>
+    <div class="form-group row">
+    </div>
+    <div class="form-group row">
+    </div>
+  </form>
+</div>
+<!-- <form [formGroup]="studentForm">
+  <table>
+    <tr *ngFor="let student of studentList">
+      <td>{{student?.firstName}}</td>
+      <td>
+        <input type="checkbox" (change)="addTextBox(student,student.id)">
+        <input *ngIf="student.showTextBox" type="text" [formControlName]="student.firstName" >
+      </td>
+    </tr>
+  </table>
+  <button (click)="onclick()">test</button>
+</form> -->

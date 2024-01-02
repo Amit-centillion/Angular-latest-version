@@ -1,0 +1,37 @@
+<div class="mt-3">
+    <form [formGroup]="initform">
+      <div class="form-group row">
+        <div class="col-lg-4">
+        <label for="firstName" class=" col-form-label">Select Student :</label>
+        <select class="inputBox"  class="form-control" formControlName="student_id">
+            <option *ngFor="let student of studentDetail" [value]="student.id">
+                        {{student.firstName}}
+                        </option>
+                    </select>
+        <!-- <div  *ngIf="isSave && firstName.invalid"> -->
+          <!-- <p class="text-danger">First Name is required!</p> -->
+        <!-- </div> -->
+      </div>
+        <div class="col-lg-4">
+        <label for="firstName" class=" col-form-label">Select Teacher :</label>
+        <select class="inputBox"  class="form-control" formControlName="teacher_id">
+            <option *ngFor="let teacher of teacherList" [value]="teacher.id">
+                        {{teacher.teacher_name}}
+                        </option>
+                    </select>
+        <!-- <div  *ngIf="isSave && firstName.invalid"> -->
+          <!-- <p class="text-danger">First Name is required!</p> -->
+        <!-- </div> -->
+      </div>
+   </div>
+      <div class="form-group row mt-3">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary" (click)="OnClickButton()">Submit</button>
+        </div>
+      </div>
+      <div class="form-group row">
+      </div>
+      <div class="form-group row">
+      </div>
+    </form>
+  </div>

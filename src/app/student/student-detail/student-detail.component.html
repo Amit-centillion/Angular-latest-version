@@ -1,0 +1,10 @@
+<table>
+    <tr *ngFor="let student of studentList">
+      <td>{{student?.firstName}}</td>
+      <td>
+        <input type="checkbox" (change)="addTextBox(student)">
+        <input *ngIf="student.showTextBox" type="text" placeholder="Additional Info">
+      </td>
+    </tr>
+  </table>
+  

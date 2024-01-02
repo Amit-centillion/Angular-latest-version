@@ -1,0 +1,76 @@
+<div>
+    <nav>
+        <ul>
+          <li><a (click)="showComponent('student')">Student</a>
+              <ul>
+                <li>
+                  <a (click)="showComponent('student')">Add Student</a>
+                  <a (click)="showComponent('listOfStudent')">List of Student</a>
+              </li>
+              </ul>
+          </li>
+          <li><a (click)="showComponent('teacher')">Teacher</a>
+          <li><a (click)="showComponent('student')">Subject</a>
+          <li><a (click)="showComponent('scheduled')">Scheduled</a></li> 
+        </ul>
+    </nav>
+    <div style="padding: 20px;">
+      <div *ngIf="selectedComponent === 'student'">
+        <app-student></app-student>
+      </div>
+      <div *ngIf="selectedComponent === 'teacher'">
+          <app-teacher></app-teacher>
+      </div>
+      <div *ngIf="selectedComponent === 'listOfStudent'">
+        <app-student-detail></app-student-detail>
+    </div>
+    <div *ngIf="selectedComponent === 'scheduled'">
+      <app-scheduled></app-scheduled>
+  </div>
+    </div>
+</div>
+<!-- <div class="container mt-3">
+  <form>
+    <div class="form-group row">
+      <div class="col-lg-4">
+      <label for="firstName" class=" col-form-label">First Name:</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+        <p>test</p>
+      </div>
+      <div class="col-lg-4">
+      <label for="lastName" class=" col-form-label">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+      </div>
+      <div class="col-lg-4">
+
+      <label for="email" class=" col-form-label">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-lg-4">
+      <label for="firstName" class=" col-form-label">First Name:</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+        <p>test</p>
+      </div>
+      <div class="col-lg-4">
+      <label for="lastName" class=" col-form-label">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+      </div>
+      <div class="col-lg-4">
+
+      <label for="email" class=" col-form-label">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+    </div>
+    <div class="form-group row mt-3">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+    <div class="form-group row">
+    </div>
+    <div class="form-group row">
+    </div>
+  </form>
+</div> -->

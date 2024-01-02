@@ -1,0 +1,52 @@
+<h3>Add Teacher Information</h3>
+<form [formGroup]="initform">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <label>First Name:</label>
+          </td>
+          <td>
+            <input type="text" id="studentName"  formControlName="firstName" required/>
+          </td>
+          <td>
+            <label>Last Name:</label>
+          </td>
+          <td>
+            <input type="text" id="studentName"  formControlName="lastName" required/>
+          </td>
+          <td>
+            <label>Date of Birth:</label>
+          </td>
+          <td>
+            <input type="date" id="studentName"  formControlName="dateofBirth" required/>
+          </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Gender:</label>
+            </td>
+            <td>
+                <input type="text" id="studentName"  formControlName="gender" required/>
+            </td>
+            <td>
+                <label>Contact Number:</label>
+            </td>
+            <td>
+                <input type="text" id="studentName"  formControlName="contactNumber" required/>
+            </td>
+            <td>
+              <label>Address:</label>
+          </td>
+          <td>
+              <input type="text" id="studentName"  formControlName="address" required/>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit" (click)="OnClickButton()">Save</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
